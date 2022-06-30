@@ -57,6 +57,7 @@ module "module-cloudep-dns-prep" {
   # version = "~> 3.1"
 
   count                             = var.ensure_undelete ? 1 : 0
+  cache_path                        = var.gcloud_cache_path
   platform                          = "linux"
   skip_download                     = var.skip_gcloud_download
   use_tf_google_credentials_env_var = var.use_tf_google_credentials_env_var

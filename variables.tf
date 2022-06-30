@@ -38,6 +38,12 @@ variable "skip_gcloud_download" {
   default     = true
 }
 
+variable "gcloud_cache_path" {
+  description = "Path to the local folder to use as a cache for the gcloud module."
+  type        = string
+  default     = null
+}
+
 variable "use_tf_google_credentials_env_var" {
   description = "Use `GOOGLE_CREDENTIALS` environment variable to run `gcloud auth activate-service-account` with."
   default     = false
