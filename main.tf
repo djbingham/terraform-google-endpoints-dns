@@ -68,11 +68,11 @@ module "module-cloudep-dns-prep" {
   destroy_cmd_entrypoint = ""
   destroy_cmd_body       = ""
 
-  create_cmd_triggers = [
-    var.external_ip,
-    var.name,
-    var.project
-  ]
+  create_cmd_triggers = {
+    external_ip = var.external_ip
+    name        = var.name
+    project     = var.project
+  }
 
   module_depends_on = [
     google_project_service.endpoints,
